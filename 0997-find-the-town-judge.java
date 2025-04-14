@@ -1,5 +1,8 @@
 class Solution {
     public int findJudge(int n, int[][] trust) {
+        if (n < 1) {
+            throw new IllegalArgumentException("invalid");
+        }
         int[] count = new int[n];
         for (int[] t : trust) {
             count[t[0] - 1]--;
