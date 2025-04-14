@@ -7,7 +7,7 @@ class ParkingSystem {
     
     public boolean addCar(int carType) {
         int index = carType - 1;
-        if (index < 0 || index >= cars.length) {
+        if (cars == null || index < 0 || index >= cars.length) {
             throw new IllegalArgumentException("invalid");
         }
         if (cars[index] > 0) {
