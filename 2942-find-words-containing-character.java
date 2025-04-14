@@ -5,6 +5,9 @@ class Solution {
         }
         List<Integer> ans = new ArrayList<>();
         for (int i = 0; i < words.length; i++) {
+            if (words[i] == null) {
+                throw new IllegalArgumentException("invalid");
+            }
             if (words[i].indexOf(x) != -1) {
                 ans.add(i);
             }
