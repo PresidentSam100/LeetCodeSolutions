@@ -14,7 +14,7 @@ class Solution {
                 ans[index++] = num;
             }
         }
-        if (index < 2) {
+        if (index != 2) {
             throw new IllegalStateException("invalid");
         }
         return ans;
