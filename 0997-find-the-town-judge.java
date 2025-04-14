@@ -1,10 +1,13 @@
 class Solution {
     public int findJudge(int n, int[][] trust) {
-        if (n < 1) {
+        if (trust == null || n < 1) {
             throw new IllegalArgumentException("invalid");
         }
         int[] count = new int[n];
         for (int[] t : trust) {
+            if (t == null || t.length != 2) {
+                throw new IllegalArgumentException("invalid");
+            }
             count[t[0] - 1]--;
             count[t[1] - 1]++;
         }
