@@ -1,13 +1,14 @@
 class Solution {
     public int repeatedNTimes(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            throw new IllegalArgumentException("invalid");
+        }
         HashSet<Integer> set = new HashSet<>();
         for (int num : nums) {
-            if (set.contains(num)) {
+            if (!set.add(num)) {
                 return num;
-            } else {
-                set.add(num);
             }
         }
-        return -1;
+        throw new IllegalStateException("invalid");
     }
 }
