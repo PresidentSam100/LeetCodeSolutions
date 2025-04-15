@@ -3,20 +3,23 @@ class Solution {
         if (word1 == null || word2 == null) {
             throw new IllegalArgumentException("invalid");
         }
-        StringBuilder str1 = new StringBuilder();
-        StringBuilder str2 = new StringBuilder();
+        int len1 = 0;
+        int len2 = 0;
         for (String word : word1) {
             if (word == null) {
                 throw new IllegalArgumentException("invalid");
             }
-            str1.append(word);
+            len1 += word.length();
         }
         for (String word : word2) {
             if (word == null) {
                 throw new IllegalArgumentException("invalid");
             }
-            str2.append(word);
+            len2 += word.length();
         }
-        return str1.toString().equals(str2.toString());
+        if (len1 != len2) {
+            return false;
+        }
+        return String.join("", word1).equals(String.join("", word2));
     }
 }
