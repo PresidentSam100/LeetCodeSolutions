@@ -8,7 +8,7 @@ class Solution {
         int l = 0;
         int r = n - 1;
         for (int num : nums) {
-            if (num % 2 == 0) {
+            if ((num & 1) == 0) {
                 ans[l++] = 0;
             } else {
                 ans[r--] = 1;
