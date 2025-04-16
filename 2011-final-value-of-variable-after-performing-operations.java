@@ -5,6 +5,9 @@ class Solution {
         }
         int x = 0;
         for (String operation : operations) {
+            if (operation == null) {
+                throw new IllegalArgumentException("invalid");
+            }
             switch (operation) {
                 case "--X":
                 case "X--":
