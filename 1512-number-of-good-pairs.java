@@ -4,12 +4,11 @@ class Solution {
             throw new IllegalArgumentException("invalid");
         }
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-        }
         int ans = 0;
-        for (int v : map.values()) {
-            ans += v * (v - 1) / 2;
+        for (int num : nums) {
+            int count = map.getOrDefault(num, 0);
+            ans += count;
+            map.put(num, count + 1);
         }
         return ans;
     }
