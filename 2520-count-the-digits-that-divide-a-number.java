@@ -6,10 +6,11 @@ class Solution {
         int ans = 0;
         int n = num;
         while (n > 0) {
-            if (n % 10 == 0) {
+            int digit = n % 10;
+            if (digit == 0) {
                 throw new IllegalArgumentException("invalid");
             }
-            if (num % (n % 10) == 0) {
+            if (num % digit == 0) {
                 ans++;
             }
             n /= 10;
