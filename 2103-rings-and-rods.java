@@ -3,8 +3,8 @@ class Solution {
         if (rings == null || rings.length() % 2 != 0) {
             throw new IllegalArgumentException("invalid");
         }
-        int[] rods = new int[10];
         int ans = 0;
+        int[] rods = new int[10];
         for (int i = 0; i < rings.length(); i += 2) {
             int colorBit = switch (rings.charAt(i)) {
                 case 'R' -> 0b001;
