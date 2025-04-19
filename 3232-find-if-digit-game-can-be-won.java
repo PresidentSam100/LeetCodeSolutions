@@ -9,9 +9,9 @@ class Solution {
             if (num < 1 || num > 99) {
                 throw new IllegalArgumentException("invalid");
             }
-            if (num < 10) {
+            if (num <= 9) {
                 singleSum += num;
-            } else {
+            } else if (num >= 10) {
                 doubleSum += num;
             }
         }
