@@ -5,6 +5,9 @@ class Solution {
         }
         int ans = 0;
         for (String command : commands) {
+            if (command == null) {
+                throw new IllegalArgumentException("invalid");
+            }
             ans += switch (command) {
                 case "RIGHT" -> 1;
                 case "LEFT" -> -1;
