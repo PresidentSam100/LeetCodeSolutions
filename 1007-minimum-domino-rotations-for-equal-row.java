@@ -24,7 +24,6 @@ class Solution {
                 }
             }
             ans = Math.min(ans, Math.min(tt, bb));
-            
         }
         return (ans == n) ? -1 : ans;
     }
